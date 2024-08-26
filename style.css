@@ -108,10 +108,6 @@ a {
   box-sizing: border-box;
 }
 
-.myphoto:hover {
-  transform: scale(1.05);
-}
-
 .myphoto img {
   width: 100%;
   height: auto;
@@ -176,14 +172,220 @@ h1 {
   color: white;
 }
 
-.i:hover {
-  transform: scale(1.3);
-}
 
 .download {
-  color: blue;
+  display: inline-block; /* Make the element behave like a button */
+  padding: 5px 10px; /* Add padding for a button-like appearance */
+  font-size: 16px; /* Set a reasonable font size */
+  color: #fff; /* Text color: white */
+  background-color: blue; /* Button background color */
+  text-align: center; /* Center text inside the button */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-.sk:hover {
-  transform: scale(1.05);
+.download:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Base styles (your existing styles) */
+
+/* Mobile Styles (small screens, up to 600px) */
+@media only screen and (max-width: 600px) {
+  .logo-container {
+    h1#page-logo {
+      font-size: 3rem;
+      /* Smaller logo font size for mobile */
+    }
+  }
+
+  header {
+    padding: 10px;
+  }
+
+
+  nav ul {
+    display: flex; /* Use flexbox to make items horizontal */
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    justify-content: left; /* Center items horizontally */
+    padding: 0; /* Remove padding to optimize space */
+  }
+
+  nav ul li {
+    display: inline-block; /* Make list items inline-block for horizontal alignment */
+    margin: 10px 10px; /* Adjust margin to space out items */
+    /* Set width to allow wrapping and ensure two items per row */
+    text-align: center; /* Center-align the text inside each list item */
+  }
+
+  .logo {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .home {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .myphoto {
+    max-width: 100%;
+    /* Increase photo size on mobile */
+  }
+
+  .h {
+    flex-direction: column;
+    height: auto;
+    /* Adjust height */
+    padding: 2rem;
+  }
+
+  .sk {
+    width: 100%;
+    /* Make skills section take full width */
+    margin-top: 10px;
+  }
+
+  #skill {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .project_image {
+    width: 100%; /* Make the image take up most of the screen width */
+    max-width: 100%; /* Ensure the image does not overflow its container */
+    height: auto; /* Maintain aspect ratio */
+    padding: 5px;
+    margin-top: 0.5cm;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center-align the image */
+    overflow: hidden; /* Prevent overflow if necessary */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+  .project_image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+  }
+}
+
+/* Tablet Styles (medium screens, 600px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .logo-container {
+    h1#page-logo {
+      font-size: 4.5rem;
+      /* Adjust logo size for tablet */
+    }
+  }
+
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  .logo {
+    gap: 1.5rem;
+  }
+
+  .home {
+    padding: 25px;
+    max-width: 80%;
+  }
+
+  .myphoto {
+    max-width: 25%;
+  }
+
+  .h {
+    flex-direction: row;
+    height: auto;
+    /* Adjust height */
+    padding: 2.5rem;
+  }
+
+  .sk {
+    width: 80%;
+    /* Adjust skill section width */
+    margin-top: 15px;
+  }
+
+  #skill {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .project {
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .project_image {
+    padding: 30px;
+    margin-top: 0.75cm;
+  }
+}
+
+/* Desktop Styles (large screens, 1025px and up) */
+@media only screen and (min-width: 1025px) {
+  .logo-container {
+    h1#page-logo {
+      font-size: 6rem;
+      /* Original size for desktop */
+    }
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  .logo {
+    gap: 2rem;
+  }
+
+  .home {
+    padding: 30px;
+    max-width: 70%;
+  }
+
+  .myphoto {
+    max-width: 15%;
+  }
+
+  .h {
+    flex-direction: row;
+    height: 65vh;
+    /* Original height */
+    padding: 3rem;
+  }
+
+  .sk {
+    width: 500px;
+    /* Original width */
+  }
+
+  #skill {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .project {
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  .project_image {
+    padding: 40px;
+    margin-top: 1cm;
+  }
 }
